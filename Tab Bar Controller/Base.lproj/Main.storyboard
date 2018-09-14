@@ -13,7 +13,7 @@
         <!--Дневник-->
         <scene sceneID="KxX-cj-2dL">
             <objects>
-                <viewController id="JXX-ir-oZk" sceneMemberID="viewController">
+                <viewController id="JXX-ir-oZk" customClass="YellowViewController" customModule="Tab_Bar_Controller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="70x-if-Fdl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
                                 <state key="normal" title="Успеваемость"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pdJ-yV-EWf"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Дневник" image="bookmark" id="GlF-os-PbA"/>
@@ -49,7 +49,7 @@
         <!--Новости-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tab_Bar_Controller" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GreenViewController" customModule="Tab_Bar_Controller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,18 +60,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2663" y="-422"/>
+            <point key="canvasLocation" x="2661.5999999999999" y="-422.33883058470769"/>
         </scene>
         <!--Сообщения-->
         <scene sceneID="w9d-Ss-fgu">
             <objects>
-                <viewController id="de7-U7-vyS" sceneMemberID="viewController">
+                <viewController id="de7-U7-vyS" customClass="DarkViewController" customModule="Tab_Bar_Controller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nyt-HL-Ztw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon-1024" translatesAutoresizingMaskIntoConstraints="NO" id="KLh-l1-eOD">
-                                <rect key="frame" x="59" y="117" width="256" height="332"/>
+                                <rect key="frame" x="59" y="137" width="256" height="332"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -87,14 +87,27 @@
         <!--Настройки-->
         <scene sceneID="So1-em-t7i">
             <objects>
-                <viewController id="rx7-0U-il3" sceneMemberID="viewController">
+                <viewController id="rx7-0U-il3" customClass="BlueViewController" customModule="Tab_Bar_Controller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="50F-zS-vLz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="leh-K7-kod">
+                                <rect key="frame" x="8" y="0.0" width="359" height="582"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pru-qr-p7w"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Настройки" image="settings" id="lZn-6a-4w1"/>
+                    <connections>
+                        <outlet property="textView" destination="leh-K7-kod" id="3u3-Wt-F4E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEh-PO-5FA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
